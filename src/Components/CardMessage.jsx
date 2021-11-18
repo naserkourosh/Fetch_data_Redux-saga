@@ -17,7 +17,7 @@ import Button from '@mui/material/Button';
 import PetsIcon from '@mui/icons-material/Pets';
 import Loading from './Loading';
 import { Box } from "@mui/system";
-
+import Alert from '@mui/material/Alert';
 
 
 const CardMessage = () => {
@@ -51,7 +51,7 @@ const CardMessage = () => {
       <CardContent>
         <Typography variant="body1">
           <Box>
-            {pending ? (<Loading/>) : error ? (<Box>Error</Box>) : posts.text}
+            {pending ? (<Loading/>) : error ? (<Alert severity="error">Error! Please try again</Alert>) : posts.text}
            </Box>
         </Typography>
       </CardContent>
